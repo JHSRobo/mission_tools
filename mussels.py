@@ -1,0 +1,6 @@
+inside = int(input("How many mussels are inside the quadrant? "))
+bed = map(lambda x: int(x), input("What are the dimensions of the mussel bed? (AxB) ").split("x"))
+rate = float(input("What is the filtration rate per mussel? "))
+total = int((next(bed) * next(bed) / .25) * inside)
+print(f"There are {total} mussels inside the bed")
+print(f"The filtration rate of the bed is {round(total * rate, 2)} liters per hour")
